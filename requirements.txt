@@ -1,3 +1,5 @@
 django
 mysqlclient
 python-dotenv
+django-bootstrap4
+django-bootstrap-datepicker-plus
