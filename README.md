@@ -12,19 +12,19 @@ Complete end to end solution to restaurant booking built in Django Python
     source .venv/bin/activate
 
 ### Install project requirement package 
-    
+
     pip install -r requirements.txt
 
 ### Copy and setup .env file
-    
+
     cp .env.example .env
 
 ### Run migration
-    
+
     python manage.py migrate
 
 ### Create superuser for admin panel
-    
+
     python manage.py createsuperuser
 
 ### Start server
