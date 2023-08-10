@@ -1,0 +1,41 @@
+{% extends 'layouts/inner-layout.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <p><span>Login</span></p>
+        </div>
+
+        <form method="post" role="form" class="php-email-form p-3 p-md-4">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-xl-6 form-group">
+                    <input type="text" name="username" class="form-control" id="username" placeholder="Your Username" required>
+                </div>
+                <div class="col-xl-6 form-group">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Your Password" required>
+                </div>
+            </div>
+            <div class="my-3">
+                <div class="loading">Loading</div>
+                {% if error_message %}
+                    <div class="error-message" style="display: block;">
+                        {{ error_message }}
+                    </div>
+                {% endif %}
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center">
+                <button type="submit">Login</button>
+            </div>
+            <div class="text-center mt-2">
+                <p>New guest? <span><a href="">Signup here</a></span></p>
+                
+            </div>
+        </form><!--End Contact Form -->
+
+    </div>
+</section><!-- End Contact Section -->
+{% endblock %}

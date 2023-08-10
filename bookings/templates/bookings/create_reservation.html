@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Reservation</title>
+</head>
+<body>
+    <h1>Create Reservation</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Book">
+    </form>
+</body>
+</html>
